@@ -32,9 +32,9 @@ const images = [
   const gallery = document.querySelector('#gallery');
   const galleryItem = images.map(image => {
     const img = document.createElement("img");
-    img.setAttribute('url', image.url);
+    img.setAttribute('src', image.url);
     img.setAttribute('alt', image.alt);
-    img.setAttribute('style', "width: 100%; height: 100px;");
+    img.setAttribute('style', "width: auto; height: 300px;");
     gallery.append(img);  
   }); 
   
