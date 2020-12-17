@@ -5,7 +5,8 @@
 В HTML есть список ul#gallery.
 
 <ul id="gallery"></ul>
-Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные строки и insertAdjacentHTML().
+Используй массив объектов images для создания тегов img вложенных в li. 
+Для создания разметки используй шаблонные строки и insertAdjacentHTML().
 
 Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
@@ -30,12 +31,10 @@ const images = [
   ];
 
   const gallery = document.querySelector('#gallery');
-  const galleryItem = images.map(image => {
-    const img = document.createElement("img");
-    img.setAttribute('src', image.url);
-    img.setAttribute('alt', image.alt);
-    img.setAttribute('style', "width: auto; height: 300px;");
-    gallery.append(img);  
-  }); 
+
+  const galleryItem = ({ url, alt }) =>
+  `<li><img src="${url}" alt="${alt}" width = "auto" height = "300px"></li>`;
+  
+  images.map(image => gallery.insertAdjacentHTML('beforeend', galleryItem(image))); 
   
   gallery.setAttribute("style", "list-style-type:none; display: flex;");
