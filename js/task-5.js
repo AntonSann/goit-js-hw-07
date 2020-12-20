@@ -5,7 +5,7 @@ const outputName = document.querySelector('#name-output');
 
 const getName = () => {
     outputName.textContent = 'незнакомец';
-    if(inputName.value.trim()){
+    if(inputName.value){
         outputName.textContent = inputName.value.trim();
     };
 };

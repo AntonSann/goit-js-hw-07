@@ -20,6 +20,6 @@ const mapped = items.map(item => {
 
     const title = item.querySelector('h2');
     const list = item.querySelectorAll('#categories li');
-    console.log('Категория:', title, '\r\nКоличество элементов:', list.length);
+    console.log('Категория:', title.textContent, '\r\nКоличество элементов:', list.length);
 });
 mapped;

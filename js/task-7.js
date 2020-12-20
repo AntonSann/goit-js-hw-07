@@ -7,5 +7,5 @@ const changeSize = () => {
     text.style.fontSize = 16 * (fontSize.value / 50) + "px";
 };
 
-fontSize.addEventListener("click", changeSize);
+fontSize.addEventListener("input", changeSize);
 

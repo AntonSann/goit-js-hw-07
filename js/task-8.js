@@ -14,7 +14,9 @@ function randColor() {
 }
 
 const createBoxes = (amount) => {
-    const array = Array(amount).fill({});
+    // метод fill() тут используется для создания пустого массива, который можно перебрать
+    const array = Array(amount).fill();
+    
     array.map(item => {
         item = `<div style="background-color: ${randColor()}; width: ${sizes}px; height: ${sizes}px;"></div>`;
         divBoxes.insertAdjacentHTML('beforeend', item);
@@ -24,6 +26,7 @@ const createBoxes = (amount) => {
 
 const destroyBoxes = () => {
     divBoxes.innerHTML = '';
+    controls.querySelector('input').value = 0;
     sizes = 30;
 };
 
