@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
 </head>
 <body>
@@ -59,17 +60,27 @@
   data-length="6"
   placeholder="Введи 6 символов"
 />
+
+<br />
       <!--Task 7-->
       <input id="font-size-control" type="range" />
 <br />
 <span id="text">Абракадабра!</span>
 </body>
+      <!--Task 8-->
+<div id="controls">
+  <input type="number" min="0" max="100" step="1" />
+  <button type="button" data-action="render">Создать</button>
+  <button type="button" data-action="destroy">Очистить</button>
+</div>
+<div id="boxes"></div> 
+
 <script type="module" src="./task-1.js"></script>
 <script type="module" src="./task-2.js"></script>
 <script type="module" src="./task-3.js"></script>
 <script type="module" src="./task-4.js"></script>
-<!--<script type="module" src="./task-5.js"></script>
+<script type="module" src="./task-5.js"></script>
 <script type="module" src="./task-6.js"></script>
 <script type="module" src="./task-7.js"></script> 
-<script type="module" src="./task-8.js"></script>-->
+<script type="module" src="./task-8.js"></script>
 </html>
