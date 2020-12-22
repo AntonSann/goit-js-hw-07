@@ -26,7 +26,7 @@ const createBoxes = (amount) => {
 
 const destroyBoxes = () => {
     divBoxes.innerHTML = '';
-    controls.querySelector('input').value = 0;
+    controls.querySelector('input').value = "";
     sizes = 30;
 };
 
